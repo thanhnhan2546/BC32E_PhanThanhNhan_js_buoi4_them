@@ -1,5 +1,5 @@
 /**
- * Bài 1:
+Bài 1:
 
 Đầu vào:
 - Ngày, Tháng Năm
@@ -183,8 +183,26 @@ document.getElementById('btnNgayMai').onclick = function () {
 }
 
 /**
- * Bài 2:
- * 
+Bài 2:
+ 
+Đầu vào:
+- Tháng, Năm
+
+Xử lý:
+- tạo biến thang, nam và gán Tháng, Năm vào biến
+- tạo biến kq2
+- nếu 12 < tháng < 1 => kq2 = "Không xác định"
+- nếu năm chia hết cho 4 và không chia hết cho 100 hoặc năm chia hết cho 400 =>
+    + nếu tháng = 2 => có 29 ngày
+    + nếu tháng = 1,3,5,7,8,10,12 => có 31 ngày
+    + nếu tháng = 4,6,9,11 => có 30 ngày
+- nếu là các năm khác
+    + nếu tháng = 2 => có 28 ngày
+    + nếu tháng = 1,3,5,7,8,10,12 => có 31 ngày
+    + nếu tháng = 4,6,9,11 => có 30 ngày
+
+Đầu ra:
+- Số ngày
  */
 document.getElementById('kq_Bai2').onclick = function () {
     var thang  = Number(document.getElementById('thangBai2').value);
@@ -219,7 +237,27 @@ document.getElementById('kq_Bai2').onclick = function () {
 }
 
 /**
- * Bài 3:
+ Bài 3:
+ 
+ Đầu vào:
+ - Số nguyên có 3 chữ số
+
+ Xử lý:
+ - tạo biến so và gán Số nguyên cho biến
+ - tạo biến dvi = so % 10; chuc = (so - dvi)/10 % 10; tram = Math.floor(so/100)
+ - nếu là 1 thì đọc là một
+ - nếu là 2 thì đọc là hai
+ - nếu là 3 thì đọc là ba
+ - nếu là 4 thì đọc là bốn
+ - nếu là 5 thì đọc là năm
+ - nếu là 6 thì đọc là sáu
+ - nếu là 7 thì đọc là bảy
+ - nếu là 8 thì đọc là tám
+ - nếu là 9 thì đọc là chín
+ - rồi thêm trăm vào sau biến tram và thêm mươi vào sau chuc
+
+ Đầu ra:
+ - Cách đọc Số nguyên của 3 chữ số (viết bằng chữ)
  */
 document.getElementById('kq_Bai3').onclick = function () {
     var so = Number(document.getElementById('soNguyen').value);
@@ -442,7 +480,22 @@ document.getElementById('kq_Bai3').onclick = function () {
 }
 
 /**
- * Bài 4:
+Bài 4:
+ 
+Đầu vào:
+- Tọa độ x,y của 3 sinh viên
+- Tạo độ x,y của trường
+
+Xử lý:
+- tạo biến cho tọa độ từng sinh viên và trường
+- gán tọa độ vào từng biến
+- Tính độ dài của từng sinh viên đến trường bằng công thức 
+    d = Math.sqrt(Math.pow((x1 - x2),2) + Math.pow((y1 - y2),2))
+- So sánh độ dài của từng sinh viên đến trường 
+- Độ dài lớn nhất là xa trường nhất, kết quả là tên sinh viên đó
+
+Đầu ra:
+- Tên sinh viên xa trường nhất
  */
 function doDai(x1, x2, y1, y2){
     var d =  Math.sqrt(Math.pow((x1 - x2),2) + Math.pow((y1 - y2),2))
