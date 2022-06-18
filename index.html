@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Nav pills -->
+        <div class="col-md-2">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#bai1"
+                >Bài 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai2">Bài 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai3">Bài 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#bai4">Bài 4</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="col-md-10 py-3">
+          <div class="tab-content">
+            <div class="tab-pane container active" id="bai1">
+              <h1>Tính ngày tháng năm</h1>
+              <div class="note"></div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="ngay"
+                    type="number"
+                    class="form-control"
+                    placeholder="Ngày"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="thang"
+                    type="number"
+                    class="form-control"
+                    placeholder="Tháng"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="nam"
+                    type="number"
+                    class="form-control"
+                    placeholder="Năm "
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success mr-3" id="btnHomQua">
+                  Hôm qua
+                </button>
+                <button class="btn btn-success" id="btnNgayMai">
+                  Ngày mai
+                </button>
+                <div class="alert alert-success mt-2" id="KQ1"></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai2">
+              <h1>Tính ngày</h1>
+              <div class="note"></div>
+              <div class="row mb-4">
+                <div class="col-md-4">
+                  <input
+                    id="thangBai2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Tháng"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    id="namBai2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Năm "
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai2">Tính ngày</button>
+                <div class="alert alert-success mt-2" id="KQ2"></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai3">
+              <h1>Đọc số</h1>
+              <div class="note"></div>
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="soNguyen"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập số nguyên có 3 chữ số"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai3">Đọc số</button>
+                <div class="alert alert-success mt-2" id="KQ3"></div>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="bai4">
+              <h1>Tìm sinh viên xa trường nhất</h1>
+              <div class="note"></div>
+              <span>Sinh viên 1 : </span>
+              <div class="row mb-4 mt-3">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="tenSV1"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nhập tên"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="x_SV1"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="y_SV1"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+              </div>
+              <span>Sinh viên 2 : </span>
+              <div class="row mb-4 mt-3">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="tenSV2"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nhập tên"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="x_SV2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="y_SV2"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+              </div>
+              <span>Sinh viên 3 : </span>
+              <div class="row mb-4 mt-3">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="tenSV3"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nhập tên"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="x_SV3"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="y_SV3"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+              </div>
+              <span>Trường : </span>
+              <div class="row mb-4 mt-3">
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="x_truong"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ X"
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <input
+                    id="y_truong"
+                    type="number"
+                    class="form-control"
+                    placeholder="Nhập tọa độ Y"
+                  />
+                </div>
+              </div>
+              <div class="result-form">
+                <button class="btn btn-success" id="kq_Bai4">Tìm</button>
+                <div class="alert alert-success mt-2" id="KQ4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
